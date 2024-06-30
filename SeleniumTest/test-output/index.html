@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.project.test.TC_loginLogout" class="method navigator-link" hash-for-method="defaultLogInLogOut">defaultLogInLogOut</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.project.test.TC_MultiWorkFlow" class="method navigator-link" hash-for-method="multiFlow">multiFlow</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -121,14 +121,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.project.test.TC_loginLogout</span>
+              <span class="class-name">com.project.test.TC_MultiWorkFlow</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="defaultLogInLogOut">
-                  </a> <!-- defaultLogInLogOut -->
-                  <span class="method-name">defaultLogInLogOut</span>
+                  <a name="multiFlow">
+                  </a> <!-- multiFlow -->
+                  <span class="method-name">multiFlow</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -145,11 +145,12 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;utils.SuiteListner&quot;/&gt;
+    &lt;listener class-name=&quot;utils.RetryListner&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;FirefoxTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.project.test.TC_loginLogout&quot;/&gt;
+      &lt;class name=&quot;com.project.test.TC_MultiWorkFlow&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- FirefoxTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -191,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'defaultLogInLogOut')
-data.setCell(0, 2, 'com.project.test.TC_loginLogout')
-data.setCell(0, 3, 2051);
+data.setCell(0, 1, 'multiFlow')
+data.setCell(0, 2, 'com.project.test.TC_MultiWorkFlow')
+data.setCell(0, 3, 12729);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -224,25 +225,31 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.project.test.TC_loginLogout</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.project.test.TC_MultiWorkFlow</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">mainBeforeTestMethod</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(firefox, public void com.project.test.TC_loginLogout.defaultLogInLogOut())</span>
-                <span class="method-start">302 ms</span>
+                <span class="method-name">beforeMethod(firefox, public void com.project.test.TC_MultiWorkFlow.multiFlow() throws java.lang.InterruptedExcep...)</span>
+                <span class="method-start">511 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">defaultLogInLogOut</span>
-                <span class="method-start">5438 ms</span>
+                <span class="method-name">multiFlow</span>
+                <span class="method-start">8189 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">afterMethod([TestResult name=defaultLogInLogOut status=SUCCESS method=TC_loginLogout.defaultLogInLogOut()[pri:0,...)</span>
-                <span class="method-start">7492 ms</span>
+                <span class="method-name">afterMethod([TestResult name=multiFlow status=SUCCESS method=TC_MultiWorkFlow.multiFlow()[pri:0, instance:com.pr...)</span>
+                <span class="method-start">20922 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">22620 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">22636 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

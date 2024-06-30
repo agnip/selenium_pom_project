@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.test.TC_loginLogout">
+      <class name="deletethis.scrollTo">
         <methods>
           <include name="afterMethod"/>
           <include name="afterTest"/>
           <include name="beforeMethod"/>
           <include name="mainBeforeTestMethod"/>
-          <include name="defaultLogInLogOut"/>
-          <include name="tearDown"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- com.project.test.TC_loginLogout -->
+      </class> <!-- deletethis.scrollTo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
