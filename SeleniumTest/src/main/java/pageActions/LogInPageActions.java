@@ -1,29 +1,51 @@
 package pageActions;
-import org.testng.Assert;
 
+import java.io.FileInputStream;
 import base.BaseTest;
-import pageObjects.HomePageElements;
 import pageObjects.LogInPageElements;
 import utils.ElementFetch;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 public class LogInPageActions extends BaseTest {
-	
-	ElementFetch ele  = new ElementFetch();
-	
+
+	ElementFetch ele = new ElementFetch();
+	BaseTest base;
+	private Properties properties;
+
+	// Method to load properties from a file
+	private void loadProperties() {
+		properties = new Properties();
+		String ProjectPath = System.getProperty("user.dir");
+		try (InputStream inputStream = new FileInputStream(ProjectPath + LogInPageElements.property_path)) {
+			properties.load(inputStream);
+		} catch (IOException e) {
+			e.printStackTrace(); // Handle the exception according to your application's error handling strategy
+		}
+	}
+
 	public void verifyPageLoad() {
 		logger.info("Launching application in browser");
-		ele.getWebElement("XPATH", LogInPageElements.Uid_field).isDisplayed();	
+		ele.getWebElement("XPATH", LogInPageElements.Uid_field).isDisplayed();
 		ele.getWebElement("XPATH", LogInPageElements.pwd_field).isDisplayed();
 		ele.getWebElement("XPATH", LogInPageElements.logIn_btn).isEnabled();
-		logger.info("Check credital spaces are enabled");
-	
+		logger.info("All fields are visible and enabled");
+
 	}
-	
-	public void logIn() {
-		 ele.getWebElement("XPATH", LogInPageElements.Uid_field).sendKeys("standard_user");
-		 ele.getWebElement("XPATH", LogInPageElements.pwd_field).sendKeys("secret_sauce");
-		 ele.getWebElement("XPATH", LogInPageElements.logIn_btn).click();
-		 logger.info("Entered credential and pressed login");
+
+	public void StandardlogIn() {
+
+		if (properties == null) {
+			loadProperties(); // Load properties if not already loaded
+		}
+		String standardUser = properties.getProperty("standardUser");
+		String password = properties.getProperty("password");
+		logger.info("Testing login with " + standardUser);
+		ele.getWebElement("XPATH", LogInPageElements.Uid_field).sendKeys(standardUser);
+		ele.getWebElement("XPATH", LogInPageElements.pwd_field).sendKeys(password);
+		ele.getWebElement("XPATH", LogInPageElements.logIn_btn).click();
+		logger.info("Entered credential and pressed login");
 	}
 
 }

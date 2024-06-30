@@ -3,15 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.test.TC_login">
+      <class name="com.project.test.TC_loginLogout">
         <methods>
           <include name="afterMethod"/>
-          <include name="methodLoginValidation"/>
           <include name="afterTest"/>
           <include name="beforeMethod"/>
           <include name="mainBeforeTestMethod"/>
+          <include name="defaultLogInLogOut"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.project.test.TC_login -->
+      </class> <!-- com.project.test.TC_loginLogout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -3,15 +3,12 @@ package base;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import org.testng.internal.invokers.TestMethodArguments;
-
 import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -20,12 +17,15 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.Constants;
 
+
 public class BaseTest implements Constants {
 	public static WebDriver driver;
 	public ExtentSparkReporter sparkReporter;
 	public ExtentReports extent;
 	public static ExtentTest logger;
 	
+
+	// Method to load properties from a file
 
 	@BeforeTest
 	public void mainBeforeTestMethod() {
@@ -51,8 +51,7 @@ public class BaseTest implements Constants {
 		driver.manage().window().maximize();
 		driver.get(Constants.url);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		
-		
+
 	}
 
 	@AfterMethod
