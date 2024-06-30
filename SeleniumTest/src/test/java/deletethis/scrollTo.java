@@ -1,19 +1,15 @@
 package deletethis;
 
-import java.time.Duration;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import base.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageActions.HomePageActions;
 import pageActions.LogInPageActions;
 import pageObjects.LogInPageElements;
-import utils.Constants;
 import utils.ElementFetch;
 
 public class scrollTo extends BaseTest {
@@ -32,7 +28,7 @@ public class scrollTo extends BaseTest {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
-		driver.manage().timeouts().implicitlyWait(3, java.util.concurrent.TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(3, java.util.concurrent.TimeUnit.SECONDS);
 		ele.getWebElement("XPATH", LogInPageElements.Uid_field).sendKeys("standard_user");
 		ele.getWebElement("XPATH", LogInPageElements.pwd_field).sendKeys("secret_sauce");
 		ele.getWebElement("XPATH", LogInPageElements.logIn_btn).click();

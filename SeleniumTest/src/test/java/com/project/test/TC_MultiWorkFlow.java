@@ -10,6 +10,7 @@ import org.testng.Assert;
 import pageActions.CustomerDetailsPageActions;
 import pageActions.HomePageActions;
 import pageActions.LogInPageActions;
+import pageActions.PaymentPageActions;
 import pageObjects.CartPageElements;
 import pageObjects.HomePageElements;
 import pageObjects.PaymentPageElements;
@@ -21,6 +22,7 @@ public class TC_MultiWorkFlow extends BaseTest {
 	HomePageActions homepage = new HomePageActions();
 	LogInPageActions login = new LogInPageActions();
 	CustomerDetailsPageActions cust = new CustomerDetailsPageActions();
+	PaymentPageActions payment = new PaymentPageActions();
 
 	@Test(priority = 0, enabled = true)
 	public void multiFlow() throws InterruptedException {
@@ -82,6 +84,8 @@ public class TC_MultiWorkFlow extends BaseTest {
 		Assert.assertEquals(price2.toString().toLowerCase(), final_price.toString().toLowerCase(),
 				"price of home page and payment page not matching");
 		logger.info("price of home page and payment page are matching");
+		payment.finishPayment();
+
 	}
 
 	@AfterClass
