@@ -4,18 +4,19 @@
   <listeners>
     <listener class-name="utils.SuiteListner"/>
   </listeners>
-  <test thread-count="5" name="FirefoxTest(failed)">
-    <parameter name="browser" value="firefox"/>
+  <test thread-count="5" name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.project.test.TC_login">
+      <class name="com.project.test.TC_loginLogout">
         <methods>
           <include name="afterMethod"/>
-          <include name="methodLoginValidation"/>
+          <include name="successfulLogInLogOut"/>
           <include name="afterTest"/>
           <include name="beforeMethod"/>
           <include name="mainBeforeTestMethod"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.project.test.TC_login -->
+      </class> <!-- com.project.test.TC_loginLogout -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
