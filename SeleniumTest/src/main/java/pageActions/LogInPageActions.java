@@ -48,4 +48,19 @@ public class LogInPageActions extends BaseTest {
 		logger.info("Entered credential and pressed login");
 	}
 
+	public void logInWithLockedOutusr() {
+
+		if (properties == null) {
+			loadProperties(); // Load properties if not already loaded
+		}
+		String lockedOutUser = properties.getProperty("lockedOutUser");
+		String password = properties.getProperty("password");
+		logger.info("Testing login with " + lockedOutUser);
+		ele.getWebElement("XPATH", LogInPageElements.Uid_field).sendKeys(lockedOutUser);
+		ele.getWebElement("XPATH", LogInPageElements.pwd_field).sendKeys(password);
+		ele.getWebElement("XPATH", LogInPageElements.logIn_btn).click();
+		logger.info("Entered lockedout credential and pressed login");
+
+	}
+
 }

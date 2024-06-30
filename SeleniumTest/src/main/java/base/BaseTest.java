@@ -3,10 +3,15 @@ package base;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import com.aventstack.extentreports.*;
@@ -17,15 +22,21 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.Constants;
 
-
 public class BaseTest implements Constants {
 	public static WebDriver driver;
 	public ExtentSparkReporter sparkReporter;
 	public ExtentReports extent;
 	public static ExtentTest logger;
-	
 
-	// Method to load properties from a file
+	public static void scrollToPosition(WebDriver driver, int x, int y) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(arguments[0], arguments[1])", x, y);
+	}
+
+	protected void waitForElementToBeInvisible(int timeoutInSeconds, WebElement onesie_add_to_cart) {
+		WebDriverWait wait = new WebDriverWait(driver, null);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated((By) onesie_add_to_cart));
+	}
 
 	@BeforeTest
 	public void mainBeforeTestMethod() {
@@ -69,6 +80,7 @@ public class BaseTest implements Constants {
 					MarkupHelper.createLabel(result.getName() + " - Test Case PASS", ExtentColor.GREEN));
 			driver.quit();
 		}
+
 	}
 
 	@AfterTest

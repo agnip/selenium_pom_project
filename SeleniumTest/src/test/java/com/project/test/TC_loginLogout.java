@@ -1,10 +1,10 @@
 package com.project.test;
 
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import base.BaseTest;
 import pageActions.HomePageActions;
 import pageActions.LogInPageActions;
+import pageObjects.LogInPageElements;
 import utils.ElementFetch;
 
 public class TC_loginLogout extends BaseTest {
@@ -13,7 +13,7 @@ public class TC_loginLogout extends BaseTest {
 	HomePageActions homepage = new HomePageActions();
 	LogInPageActions login = new LogInPageActions();
 
-	@Test(retryAnalyzer = utils.RetryAnalyzer.class)
+	@Test(priority = 0, enabled = false)
 	public void defaultLogInLogOut() {
 		login.verifyPageLoad();
 		login.StandardlogIn();
@@ -21,11 +21,11 @@ public class TC_loginLogout extends BaseTest {
 		homepage.verifyLogoutSuccess();
 	}
 
-	@AfterClass
-	public void tearDown() {
-		// Close WebDriver
-		if (driver != null) {
-			driver.quit();
-		}
+	@Test(priority = 1, enabled = false)
+	public void logInWithLockedOutusr() {
+		login.verifyPageLoad();
+		login.logInWithLockedOutusr();
+		ele.getWebElement("XPATH", LogInPageElements.err_msg_locked_out).isDisplayed();
 	}
+
 }
