@@ -13,7 +13,7 @@ public class TC_loginLogout extends BaseTest {
 	HomePageActions homepage = new HomePageActions();
 	LogInPageActions login = new LogInPageActions();
 
-	@Test(priority = 0, enabled = false)
+	@Test(priority = 0, enabled = true)
 	public void defaultLogInLogOut() {
 		login.verifyPageLoad();
 		login.StandardlogIn();
@@ -21,7 +21,7 @@ public class TC_loginLogout extends BaseTest {
 		homepage.verifyLogoutSuccess();
 	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1, enabled = true)
 	public void logInWithLockedOutusr() {
 		login.verifyPageLoad();
 		login.logInWithLockedOutusr();

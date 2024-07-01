@@ -42,12 +42,14 @@ public class TC_MultiWorkFlow extends BaseTest {
 		By cart2_stale_locator = By.xpath(HomePageElements.sauce_labs_onesie);
 		List<WebElement> cart1 = driver.findElements(cart1_stale_locator);
 		List<WebElement> cart2 = driver.findElements(cart2_stale_locator);
-
 		if (!cart1.isEmpty() && !cart2.isEmpty()) {
-			System.out.println("Elements are present on the page.");
+			// As elements becomes stale in above step, we are using list to verify the
+			// element
+			logger.info("Elements are present on the page.");
 		} else {
-			System.out.println("Elements are not present on the page.");
+			logger.info("Elements are not present on the page.");
 		}
+
 		ele.getWebElement("XPATH", HomePageElements.remove_sauce_labs_onesie).isEnabled();
 		ele.getWebElement("XPATH", HomePageElements.remove_sauce_labs_fleece_jacket).isEnabled();
 		logger.info("Both of the remove buttons are enabled");
@@ -65,6 +67,7 @@ public class TC_MultiWorkFlow extends BaseTest {
 				.trim();
 		Assert.assertEquals(price1.toString().toLowerCase(), price1_cart.toString().toLowerCase(),
 				"price_sauce_labs_onesie does not match in both pages");
+		// Performing multiple assertion to match item prices at different pages
 		Assert.assertEquals(price2.toString().toLowerCase(), price2_cart.toString().toLowerCase(),
 				"price_sauce_labs_fleece_jacket does not match in both pages");
 		logger.info("Both the price in cart page matches respectively with item page price");
@@ -84,16 +87,9 @@ public class TC_MultiWorkFlow extends BaseTest {
 		Assert.assertEquals(price2.toString().toLowerCase(), final_price.toString().toLowerCase(),
 				"price of home page and payment page not matching");
 		logger.info("price of home page and payment page are matching");
-		payment.finishPayment();
+		payment.finishPaymentCompleOrder();
 
 	}
 
-	@AfterClass
-	public void tearDown() {
-		// Close WebDriver
-		if (driver != null) {
-			driver.quit();
-		}
-	}
 
 }

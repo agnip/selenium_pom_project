@@ -5,16 +5,15 @@
 		<listener class-name="utils.SuiteListner" />
 		<listener class-name="utils.RetryListner" />
 	</listeners>
-	<!--<test thread-count="5" name="ChromeTest">
-		<parameter name="browser" value="chrome"></parameter>
+	<test thread-count="5" name="Testing in chrome browser">
+		<parameter name="browser" value="firefox"></parameter>
 		<classes>
-			<class name="com.project.test.TC_MultiWorkFlow" />
+			<class name="com.project.test.TC_ErrorUser" />
 		</classes>
-	</test> -->
-	 <test thread-count="5" name="FirefoxTest"> <parameter name="browser" 
-		value="firefox"></parameter> <classes> <class name="com.project.test.TC_MultiWorkFlow" 
-		/> </classes> </test> 
-		<!--<test thread-count="5" name="EdgeTest"> <parameter 
+	</test>
+	<!--<test thread-count="5" name="ChromeTest"> <parameter name="browser" 
+		value="chrome"></parameter> <classes> <class name="com.project.test.TC_BrowserRefresh" 
+		/> </classes> </test> <test thread-count="5" name="EdgeTest"> <parameter 
 		name="browser" value="edge"></parameter> <classes> <class name="com.project.test.TC_loginLogout" 
 		/> </classes> </test> -->
 </suite> 

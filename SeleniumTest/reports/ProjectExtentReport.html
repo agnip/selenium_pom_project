@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Automation Report</title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
-<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
 <style type="text/css"></style></head><body class="spa -report dark">
   <div class="app">
     <div class="layout">
@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Automation Tests Results Agnip</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jul 1, 2024 03:13:54 am</span></a>
+<a href="#"><span class="badge badge-primary">Jul 1, 2024 04:47:48 pm</span></a>
 </li>
 </ul>
 </div>
@@ -66,7 +66,8 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -74,28 +75,26 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="skip" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">multiFlow</p>
+            <p class="name">testWithErrlogin</p>
             <p class="text-sm">
-              <span>3:13:55 am</span> / <span>00:00:20:344</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>16:47:49 pm</span> / <span>00:00:12:774</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">multiFlow</h5>
-<span class='badge badge-success'>07.01.2024 3:13:55 am</span>
-<span class='badge badge-danger'>07.01.2024 3:14:15 am</span>
-<span class='badge badge-default'>00:00:20:344</span>
+<h5 class="test-status text-skip">testWithErrlogin</h5>
+<span class='badge badge-success'>07.01.2024 16:47:49</span>
+<span class='badge badge-danger'>07.01.2024 16:48:01</span>
+<span class='badge badge-default'>00:00:12:774</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
 </div><div class="detail-body mt-4">
@@ -104,163 +103,145 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:02 am</td>
+        <td>4:47:55 pm</td>
         <td>
           Launching application in browser
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:02 am</td>
+        <td>4:47:55 pm</td>
         <td>
           All fields are visible and enabled
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:02 am</td>
+        <td>4:47:55 pm</td>
         <td>
-          Testing login with standard_user
+          Testing login with error_user
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:03 am</td>
+        <td>4:47:55 pm</td>
         <td>
           Entered credential and pressed login
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:03 am</td>
+        <td>4:47:55 pm</td>
         <td>
           login successful
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:03 am</td>
-        <td>
-          Sorting by low to high is successful
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:03 am</td>
-        <td>
-          Store all the visible prices in a list
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:03 am</td>
-        <td>
-          low to high is properly sorted
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:03 am</td>
-        <td>
-          first add to cart complete
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:03 am</td>
-        <td>
-          scroll successful
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:04 am</td>
-        <td>
-          Both Itmes added to cart
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:14 am</td>
-        <td>
-          Both of the remove buttons are enabled
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:14 am</td>
-        <td>
-          price for labs_onesie is $7.99
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:14 am</td>
-        <td>
-          price for labs_fleece_jacket is $49.99
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:14 am</td>
-        <td>
-          cart value is 2
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:14 am</td>
+        <td>4:47:56 pm</td>
         <td>
           We are in Cart page
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:14 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:48:01 pm</td>
         <td>
-          Both the price in cart page matches respectively with item page price
+          <span class='badge white-text orange'>testWithErrlogin - Test Case Skipped</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testWithErrlogin</p>
+            <p class="text-sm">
+              <span>16:48:01 pm</span> / <span>00:00:12:327</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">testWithErrlogin</h5>
+<span class='badge badge-success'>07.01.2024 16:48:01</span>
+<span class='badge badge-danger'>07.01.2024 16:48:14</span>
+<span class='badge badge-default'>00:00:12:327</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:48:07 pm</td>
+        <td>
+          Launching application in browser
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:14 am</td>
+        <td>4:48:07 pm</td>
         <td>
-          Cart quantity is matching at both places
+          All fields are visible and enabled
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:15 am</td>
+        <td>4:48:07 pm</td>
         <td>
-          Item total: $49.99
+          Testing login with error_user
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:15 am</td>
+        <td>4:48:07 pm</td>
         <td>
-          $49.99
+          Entered credential and pressed login
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:15 am</td>
+        <td>4:48:07 pm</td>
         <td>
-          price of home page and payment page are matching
+          login successful
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:14:15 am</td>
+        <td>4:48:08 pm</td>
         <td>
-          You have successfully completed the order
+          We are in Cart page
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:14:15 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:48:14 pm</td>
         <td>
-          <span class='badge white-text green'>multiFlow - Test Case PASS</span>
+          <span class='badge white-text red'>testWithErrlogin - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:48:14 pm</td>
+        <td>
+          <span class='badge white-text red'>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@class='checkout_complete_container']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [775c4cff-e6e2-4d3d-9834-e083813e4c96, findElement {value=//*[@class='checkout_complete_container'], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0.2, moz:accessibilityChecks: false, moz:buildID: 20240624183754, moz:debuggerAddress: 127.0.0.1:4052, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 144808, moz:profile: C:\Users\Agnip\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:4052/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 775c4cff-e6e2-4d3d-9834-e083813e4c96 - Test Case Failed</span>
         </td>
       </tr>
   </tbody>
@@ -282,25 +263,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jul 1, 2024 03:13:54 am</h3>
+<h3>Jul 1, 2024 04:47:48 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jul 1, 2024 03:14:16 am</h3>
+<h3>Jul 1, 2024 04:48:14 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -316,13 +297,13 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> tests passed
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
-<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='50%'><b>1</b> tests failed,
+<b>1</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -339,10 +320,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='4%'><b>1</b> events passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>22</b> others
+<small data-tooltip='13%'><b>2</b> events failed,
+<b data-tooltip='%'>13</b> others
 </small>
 </div>
 </div>
@@ -358,11 +339,11 @@
 </div></div>
 <script>
 var timeline = {
-"multiFlow":20.344
+"testWithErrlogin":12.774,"testWithErrlogin":12.327
 };
 </script>
 <div class="row">
-<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="col-md-4 sysenv-container">
 <div class="card">
 <div class="card-header"><p>System/Environment</p></div>
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
@@ -385,10 +366,10 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 0,
+failParent: 1,
 warningParent: 0,
-skipParent: 0,
+skipParent: 1,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -402,16 +383,16 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 1,
-failEvents: 0,
+passEvents: 0,
+failEvents: 2,
 warningEvents: 0,
-skipEvents: 0,
-infoEvents: 22
+skipEvents: 1,
+infoEvents: 12
 };
 </script>        </div>
       </div>
     </div>
   </div>
-<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
 <script type="text/javascript"></script></body>
 </html>
