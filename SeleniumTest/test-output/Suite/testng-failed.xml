@@ -5,19 +5,18 @@
     <listener class-name="utils.SuiteListner"/>
     <listener class-name="utils.RetryListner"/>
   </listeners>
-  <test thread-count="5" name="FirefoxTest(failed)">
+  <test thread-count="5" name="Testing in chrome browser(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.project.test.TC_MultiWorkFlow">
+      <class name="com.project.test.TC_ErrorUser">
         <methods>
           <include name="afterMethod"/>
+          <include name="testWithErrlogin"/>
           <include name="afterTest"/>
           <include name="beforeMethod"/>
           <include name="mainBeforeTestMethod"/>
-          <include name="tearDown"/>
-          <include name="multiFlow"/>
         </methods>
-      </class> <!-- com.project.test.TC_MultiWorkFlow -->
+      </class> <!-- com.project.test.TC_ErrorUser -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- Testing in chrome browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->
